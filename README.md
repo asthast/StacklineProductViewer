@@ -18,7 +18,7 @@ A comprehensive product analytics dashboard built with React, Redux, and TypeScr
 - Node.js (v16 or higher)
 - npm (comes with Node.js)
 
-### Installation
+### Installation and Running the Project
 
 1. Clone the repository
 ```bash
@@ -37,7 +37,11 @@ npm run dev
 
 The application will be available at `http://localhost:5000`.
 
-**Note**: Don't use VS Code's Live Server for this project as it requires both a frontend and backend server to run properly.
+**Important Notes**: 
+- Do not use VS Code's Live Server for this project. The application requires both a frontend and backend server to run properly.
+- The project uses Vite as the development server, which serves static assets from the `client/public` directory.
+- All static files (like images) should be placed in the `client/public` directory.
+- The development server must be started using `npm run dev` to ensure both frontend and backend are running.
 
 ## Project Structure
 
