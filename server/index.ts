@@ -71,12 +71,18 @@ if (process.env.NODE_ENV === 'production') {
   app.get('*', (_req, res) => {
     res.sendFile(path.join(staticPath, 'index.html'));
   });
+
+  // Production server
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, "0.0.0.0", () => {
+    log(`Production server running on port ${PORT}`);
+  });
 } else {
   // Development setup with Vite
   (async () => {
     const PORT = process.env.PORT || 5000;
     const server = app.listen(PORT, "0.0.0.0", () => {
-      log(`Server running on port ${PORT}`);
+      log(`Development server running on port ${PORT}`);
     });
     await setupVite(app, server);
   })();
