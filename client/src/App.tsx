@@ -26,6 +26,7 @@ function NotFound() {
           </p>
         </CardContent>
       </Card>
+      
     </div>
   );
 }
