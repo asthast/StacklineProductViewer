@@ -35,7 +35,7 @@ npm install
 npm run dev
 ```
 
-The application will be available at `http://localhost:5000`.
+The application will be available at `http://localhost:3000`.
 
 **Important Notes**: 
 - Do not use VS Code's Live Server for this project. The application requires both a frontend and backend server to run properly.
