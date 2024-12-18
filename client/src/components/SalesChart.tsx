@@ -67,3 +67,4 @@ export default function SalesChart({ data }: SalesChartProps) {
     </Card>
   );
 }
+
