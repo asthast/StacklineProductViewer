@@ -63,7 +63,7 @@ The application will be available at `http://localhost:3000`.
 - Vite
 - Tailwind CSS
 - Recharts (for data visualization)
-- Express (backend)
+
 
 ## Available Scripts
 
