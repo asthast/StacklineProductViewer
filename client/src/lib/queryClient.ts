@@ -4,7 +4,10 @@ export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       queryFn: async ({ queryKey }) => {
-        const res = await fetch(queryKey[0] as string, {
+        const baseUrl = process.env.NODE_ENV === 'production' 
+          ? process.env.VERCEL_URL || ''
+          : '';
+        const res = await fetch(`${baseUrl}${queryKey[0]}`, {
           credentials: "include",
         });
 

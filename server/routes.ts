@@ -1,9 +1,9 @@
 import type { Express } from "express";
-import { createServer, type Server } from "http";
 import fs from 'fs/promises';
 import path from 'path';
 
-export function registerRoutes(app: Express): Server {
+export function registerRoutes(app: Express) {
+  // API Routes
   app.get('/api/product', async (_req, res) => {
     try {
       const data = await fs.readFile(
@@ -12,10 +12,13 @@ export function registerRoutes(app: Express): Server {
       );
       res.json(JSON.parse(data));
     } catch (error) {
+      console.error('Error loading product data:', error);
       res.status(500).json({ message: 'Failed to load product data' });
     }
   });
 
-  const httpServer = createServer(app);
-  return httpServer;
+  // Health check endpoint
+  app.get('/api/health', (_req, res) => {
+    res.json({ status: 'healthy' });
+  });
 }
