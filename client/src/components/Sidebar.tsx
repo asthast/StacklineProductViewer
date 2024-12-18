@@ -14,7 +14,7 @@ export default function Sidebar({ product }: SidebarProps) {
   return (
     <aside className="w-[300px] border-r border-gray-200 p-8 space-y-6">
       <div>
-        <img src="/stackline_logo.svg" alt="Stackline" className="h-8 w-auto" />
+        <img src="/stackline_logo (1).svg" alt="Stackline" className="h-8 w-auto" />
       </div>
       
       <Card>
