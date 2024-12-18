@@ -22,3 +22,4 @@ export function registerRoutes(app: Express) {
     res.json({ status: 'healthy' });
   });
 }
+
