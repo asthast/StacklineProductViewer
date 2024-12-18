@@ -27,6 +27,7 @@ export default function Dashboard() {
     );
   }
 
+  
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center">
