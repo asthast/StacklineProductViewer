@@ -70,3 +70,4 @@ The application will be available at `http://localhost:3000`.
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Run production server
+  
