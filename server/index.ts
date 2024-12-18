@@ -74,7 +74,7 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   // Development setup with Vite
   (async () => {
-    const PORT = 5000;
+    const PORT = process.env.PORT || 5000;
     const server = app.listen(PORT, "0.0.0.0", () => {
       log(`Server running on port ${PORT}`);
     });
